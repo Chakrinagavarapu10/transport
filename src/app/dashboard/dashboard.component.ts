@@ -27,6 +27,7 @@ export class DashboardComponent implements OnInit {
     // this.editBool=!this.editBool;
   }
   remove(d){
+    console.log(d);
     this.data.splice(d,1);
   }
 
@@ -66,7 +67,31 @@ export class DashboardComponent implements OnInit {
 
      });
 
+
+     }
+     openModal(){
+      
+      let regNo=prompt("enter your id");
+      let name=prompt('enter your name');
+      let fSec=prompt('enter 1st Section');
+      let SSec=prompt('enter 2nd Section');
+      let TSec=prompt('enter 3rd Section');
+      let FSec=prompt('enter 4th Section');
+      let datee=prompt('enter date');
+
+      this.data.push(
+        {id:regNo,
+          Name:name,
+          sec1:fSec,
+          sec2:SSec,
+          sec3:TSec,
+          sec4:FSec,
+          date:datee,
+          canEdit:false
+        });
+
    }
+ 
 
   
 

@@ -21,16 +21,16 @@ export class AddDetailsComponent implements OnInit {
     {
        reg :new FormControl(''),
        name:new FormControl(''),
-      fsec:new FormControl(''),
-      Ssec:new FormControl(''),
-      Tsec:new FormControl(''),
-      Fsec:new FormControl(''),
+      firstsec:new FormControl(''),
+      Secondsec:new FormControl(''),
+      Thirdsec:new FormControl(''),
+      Fourthsec:new FormControl(''),
       datee:new FormControl('')
     }
   );
 
   topush(){
-    this.data.push("hi");
+    alert("jgfjgcgn");
 
   }
 

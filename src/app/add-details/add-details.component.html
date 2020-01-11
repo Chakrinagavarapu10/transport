@@ -14,22 +14,22 @@
 
 <mat-form-field appearance="outline">
     <mat-label>1st Sec</mat-label>
-    <input type="text" matInput placeholder="Enter 1st Sec"  formControlName="fSec">
+    <input type="text" matInput placeholder="Enter 1st Sec"  formControlName="firstSec">
 </mat-form-field> <br>
 
 <mat-form-field appearance="outline">
     <mat-label>2nd Sec</mat-label>
-    <input type="text" matInput placeholder="Enter 2nd Sec"  formControlName="SSec">
+    <input type="text" matInput placeholder="Enter 2nd Sec"  formControlName="SecondSec">
 </mat-form-field> <br>
 
 <mat-form-field appearance="outline">
     <mat-label>3rd Sec</mat-label>
-    <input type="text" matInput placeholder="Enter 3rd Sec"  formControlName="TSec">
+    <input type="text" matInput placeholder="Enter 3rd Sec"  formControlName="ThirdSec">
 </mat-form-field> <br>
 
 <mat-form-field appearance="outline">
     <mat-label>4th Sec</mat-label>
-    <input type="text" matInput placeholder="Enter 4th Sec"  formControlName="FSec">
+    <input type="text" matInput placeholder="Enter 4th Sec"  formControlName="FourthSec">
 </mat-form-field> <br>
 
 <mat-form-field appearance="outline">
@@ -43,5 +43,5 @@
 </mat-dialog-content>
 <mat-dialog-actions>
    
-    <button  class="btn btn-success" mat-button mat-dialog-close>Add</button>
+    <button  class="btn btn-success" mat-button (click)="topush()">Add</button>
 </mat-dialog-actions>

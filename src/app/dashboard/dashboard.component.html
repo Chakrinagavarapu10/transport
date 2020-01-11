@@ -39,7 +39,7 @@
       <button type="button" class="btn btn-dark">Filter</button>
     </div>
     <div class="p-2 bd-highlight">
-      <button class="btn btn-success" (click)="openDialog()">Create a new member</button>
+      <button class="btn btn-success" (click)="openModal()">Create a new member</button>
     </div>
    
   </div>
@@ -74,6 +74,6 @@
      <td><span class="badge badge-success">Active</span></td>
      <td *ngIf=!d.canEdit><span class="innerText" (click)="toEdit(d)">Edit</span></td>
      <td *ngIf=d.canEdit><span class="innerText" (click)="toEdit(d)">Done</span></td>
-     <td><span class="text-danger" (click)="remove(d)">Delete</span></td>
+     <!-- <td><span class="text-danger" (click)="remove(d)">Delete</span></td> -->
     </tr>
   </table>
