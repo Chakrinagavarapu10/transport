@@ -1,0 +1,47 @@
+<h2 mat-dialog-title>Enter the member details</h2>
+<mat-dialog-content>
+
+<form [formGroup]="enterDetails" (submit)="topush()" >
+    <mat-form-field appearance="outline">
+        <mat-label>Reg id</mat-label>
+        <input type="text" matInput placeholder="Enter id"  formControlName="reg">
+  </mat-form-field> <br>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Name:</mat-label>
+    <input type="text" matInput placeholder="Enter name"  formControlName="name">
+</mat-form-field> <br>
+
+<mat-form-field appearance="outline">
+    <mat-label>1st Sec</mat-label>
+    <input type="text" matInput placeholder="Enter 1st Sec"  formControlName="fSec">
+</mat-form-field> <br>
+
+<mat-form-field appearance="outline">
+    <mat-label>2nd Sec</mat-label>
+    <input type="text" matInput placeholder="Enter 2nd Sec"  formControlName="SSec">
+</mat-form-field> <br>
+
+<mat-form-field appearance="outline">
+    <mat-label>3rd Sec</mat-label>
+    <input type="text" matInput placeholder="Enter 3rd Sec"  formControlName="TSec">
+</mat-form-field> <br>
+
+<mat-form-field appearance="outline">
+    <mat-label>4th Sec</mat-label>
+    <input type="text" matInput placeholder="Enter 4th Sec"  formControlName="FSec">
+</mat-form-field> <br>
+
+<mat-form-field appearance="outline">
+    <mat-label>Date</mat-label>
+    <input type="text" matInput placeholder="Enter date"  formControlName="datee">
+</mat-form-field> <br>
+
+</form>
+
+
+</mat-dialog-content>
+<mat-dialog-actions>
+   
+    <button  class="btn btn-success" mat-button mat-dialog-close>Add</button>
+</mat-dialog-actions>

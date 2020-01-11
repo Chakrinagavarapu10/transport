@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" (click)="goToMembers()">Admin Section</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" (click)="goToMembers()">Members <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="goToProducts()">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="goToReporting()">Reporting</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="goToUsers()">Users</a>
+        </li>
+      
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <p class="mr-sm-2">{{displayName}}</p>
+
+        <p (click)="logout()" class="my-4 my-sm-0 logText">Logout</p>
+      </form>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+
+  <h2>Members List</h2>
+  <div class="d-flex bd-highlight">
+    <div class="p-2 flex-grow-1 bd-highlight">
+      <input type="text" class="showtext" placeholder="Filter by name or ID">
+      &nbsp;
+      <button type="button" class="btn btn-dark">Filter</button>
+    </div>
+    <div class="p-2 bd-highlight">
+      <button class="btn btn-success" (click)="openDialog()">Create a new member</button>
+    </div>
+   
+  </div>
+
+  <table>
+    <tr>
+      <th rowspan="2">ID</th>
+      <th rowspan="2">Name</th>
+      <th colspan="4">Sections</th>
+      <th rowspan="2">Join Date</th>
+      <th rowspan="2" >Status</th>
+      <th rowspan="2">Action</th>
+      <th rowspan="2">Remove</th>
+    </tr>
+    <tr>
+      <th>1st</th>
+      <th>2nd</th>
+      <th>3rd</th>
+      <th>4th</th>
+    </tr>
+   
+    <tr *ngFor="let d of data">
+      <td><input type="text" value={{d.id}} [readOnly]=!d.canEdit> </td>
+      <td> <input type="text" value={{d.Name}} [readonly]=!d.canEdit> </td>
+      <td> <input type="text" value={{d.sec1}} [readonly]=!d.canEdit> </td>
+      <td> <input type="text" value={{d.sec2}} [readonly]=!d.canEdit> </td>
+      <td> <input type="text" value={{d.sec3}} [readonly]=!d.canEdit> </td>
+      <td> <input type="text" value={{d.sec4}} [readonly]=!d.canEdit> </td>
+      
+      
+     <td><input type="text" value={{d.date}} [readonly]=!d.canEdit>  </td>
+     <td><span class="badge badge-success">Active</span></td>
+     <td *ngIf=!d.canEdit><span class="innerText" (click)="toEdit(d)">Edit</span></td>
+     <td *ngIf=d.canEdit><span class="innerText" (click)="toEdit(d)">Done</span></td>
+     <td><span class="text-danger" (click)="remove(d)">Delete</span></td>
+    </tr>
+  </table>

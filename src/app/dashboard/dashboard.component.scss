@@ -1,0 +1,66 @@
+h4{
+    margin-top: 15px;
+}
+.text-danger{
+    cursor: pointer;
+}
+.showtext{
+    border: 1px solid black !important;
+    margin-left: 2%;
+    border-radius: 5%;
+}
+.innerText{
+    cursor: pointer;
+    color: blue;
+}
+.logText{
+   cursor: pointer;
+   color:white;
+}
+.mr-sm-2{
+    position: relative;
+    color:white;
+    font-weight: 540;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 5.5rem;
+}
+
+
+table,tr,td,th{
+    border: 1px solid rgb(185, 181, 181);
+    border-collapse: collapse;
+    text-align: center;
+    color:black;
+}
+table{
+    margin-left: 2%;
+}
+input{
+    text-align: center;
+}
+h2{
+    margin-left: 2%;
+}
+.btn btn-danger{
+    border-radius: 10%;
+    outline: 0%;
+
+}
+a{
+    text-decoration: none;
+}
+
+input[type=text]{
+    border: none;
+    outline: none;
+}
+
+// table tr:nth-child(even)
+// {
+//     background:rgb(231, 228, 228);
+// }
+// table tr:nth-child(odd)
+// {
+//     background:white;
+// }
